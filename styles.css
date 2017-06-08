@@ -1,0 +1,170 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/***** End of CSS Reset ******/
+
+
+
+html,
+body {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 300px;
+}
+
+body {
+  font-size: 62.5%;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+
+}
+
+h1 {
+  font-size: 4em;
+  color: #f3b6e8;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: Impact, Charcoal, sans-serif;
+  letter-spacing: .2em;
+}
+
+
+button {
+  font-size: 2em;
+  border-radius: 0;
+  -webkit-appearance: none;
+  margin: 0;
+  width: 11em;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+/*
+Future Feature
+.today-button {
+  border-right: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.tomorrow-button {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.selected-button {
+  border: 3px solid pink;
+  color: #6bf1db;
+  background-color: #000;
+}
+*/
+.weather-info-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 25px;
+  width: 50%;
+  border: 5px solid #b6e9f3;
+  border-radius: 30px;
+	width: 60%;
+  max-width: 550px;
+	background-color: rgba(0, 0, 0, .8);
+}
+
+
+#city-container {
+	font-size: 4em;
+	margin-bottom: 10px;
+}
+
+.scale {
+  cursor: pointer;
+  color: #00f4ff;
+}
+
+.weather-info {
+  margin-bottom: 20px;
+  font-size: 3em;
+}
+
+.wi {
+	font-size: 3em;
+	color: pink;
+}
+
+/**************
+Animation
+**************/
+
+@keyframes myanimation {
+    0% {
+       left: -200px;
+    }
+    100% {
+        left: 200%;
+    }
+}
+
+.cloud {
+	position: absolute;
+  left: -200px;
+
+	/*animation: myanimation 8s linear;*/
+}
+.cloud:before {
+
+  /* fix for bug that left trails as clouds moved across the screen */
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+
+  position: absolute;
+  font-family: weathericons;
+  top: 0;
+  left: 0;
+  content: "\f041";
+}
